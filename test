@@ -1,0 +1,6 @@
+set 6 0
+sub 1 0
+run 0
+jvs #0 1
+jmp -3
+run 1

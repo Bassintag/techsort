@@ -1,0 +1,24 @@
+
+techsort language documentation
+There is a limited number of vars accessed by their slots [1 - 10]
+The program will start with two lists: La and Lb
+At the end of your program, you should have La sorted
+You can use commands to do so (see Pushswap project details for a complete list)
+To run a command use the "run" instruction
+
+instruction set:
+run <cmd>    <times>		# Run a command n times
+add <amount> <slot>  		# Add amount to var in slot
+sub <amount> <slot>		# Sub amount from var in slot
+set <amount> <slot>		# Set var in slot as amount
+jmp <amount>			# Jump n steps
+jle <amount>			# Jump n steps if La[0] == Lb[0]
+jlg <amount>			# Jump n steps if La[0] > Lb[0]
+jls <amount>			# Jump n steps if La[0] < Lb[0]
+jae <amount>			# Jump n steps if La is empty
+jbe <amount>			# Jump n steps if Lb is empty
+jaf <amount>			# Jump n steps if La is not empty
+jbf <amount>			# Jump n steps if La is not empty
+jve <slot1>	 <slot2>	# Skips the next step if <slot1> == <slot2>
+jvg <slot1>	 <slot2>	# Skips the next step if <slot1> > <slot2>
+jvs <slot1>	 <slot2>	# Skips the next step if <slot1> < <slot2>
