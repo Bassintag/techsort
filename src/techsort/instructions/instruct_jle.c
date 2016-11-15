@@ -5,11 +5,10 @@
 ** Login   <antoine.stempfer@epitech.net>
 ** 
 ** Started on  Tue Nov 15 13:50:45 2016 Antoine Stempfer
-** Last update Tue Nov 15 21:04:11 2016 Antoine Stempfer
+** Last update Tue Nov 15 23:07:37 2016 Antoine Stempfer
 */
 
 #include "techsort.h"
-#include <stdio.h>
 
 void	instruct_jle(t_env *env, t_instruct_tkn tkn)
 {

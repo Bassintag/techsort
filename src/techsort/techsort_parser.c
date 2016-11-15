@@ -5,7 +5,7 @@
 ** Login   <antoine.stempfer@epitech.net>
 ** 
 ** Started on  Tue Nov 15 12:31:52 2016 Antoine Stempfer
-** Last update Tue Nov 15 22:20:53 2016 Antoine Stempfer
+** Last update Tue Nov 15 23:07:24 2016 Antoine Stempfer
 */
 
 #include <stdlib.h>
@@ -13,7 +13,6 @@
 #include "techsort_instruct.h"
 #include "techsort_alias.h"
 #include "my.h"
-#include <stdio.h>
 
 static t_instruct	get_label(char *buffer, int *reader)
 {
