@@ -1,11 +1,12 @@
+jas -1
 set #0 1
 jmp 2
 run rb
 sub 1 1
 jvs #1 0
-jmp -3
-jvs #1 0
-jlg -5
+jmp 2
+jmp 2
+jls -5
 run pb
 jmp 2
 run rrb

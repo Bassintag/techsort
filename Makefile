@@ -5,7 +5,7 @@
 ## Login   <bassintag@epitech.eu>
 ##
 ## Started on  Tue Nov 15 13:22:11 2016 Bassintag
-## Last update Tue Nov 15 19:17:03 2016 Antoine Stempfer
+## Last update Tue Nov 15 21:51:37 2016 Antoine Stempfer
 ##
 
 CC	=	gcc -g
@@ -49,7 +49,9 @@ SRCS	=	src/main.c \
 		src/techsort/instructions/instruct_jbf.c \
 		src/techsort/instructions/instruct_jve.c \
 		src/techsort/instructions/instruct_jvg.c \
-		src/techsort/instructions/instruct_jvs.c
+		src/techsort/instructions/instruct_jvs.c \
+		src/techsort/instructions/instruct_jas.c \
+		src/techsort/instructions/instruct_jbs.c
 
 all: $(NAME)
 

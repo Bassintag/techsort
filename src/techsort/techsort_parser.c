@@ -5,7 +5,7 @@
 ** Login   <antoine.stempfer@epitech.net>
 ** 
 ** Started on  Tue Nov 15 12:31:52 2016 Antoine Stempfer
-** Last update Tue Nov 15 20:40:50 2016 Antoine Stempfer
+** Last update Tue Nov 15 22:20:53 2016 Antoine Stempfer
 */
 
 #include <stdlib.h>
@@ -54,20 +54,27 @@ static int	parse_alias(char *buffer, int *reader)
 {
   int		i;
   int		j;
+  int		r;
+  int		l;
 
   i = 0;
+  r = 0;
+  l = 0;
   while (i < NUM_ALIAS)
     {
       j = 0;
       while (alias[i][j] == buffer[j + *reader])
 	if (alias[i][++j] == '\0')
-	  {
-	    *reader += j - 1;
-	    return (i);
-	  }
+	  if (l < j)
+	    {
+	      r = i;
+	      l = j;
+	    }
       i++;
     }
-  return (0);
+  if (l)
+    *reader += l - 1;
+  return (r);
 }
 
 static void	get_mod(char *buffer, t_instruct_tkn *tkn, int *reader, int id)

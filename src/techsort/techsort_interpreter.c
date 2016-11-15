@@ -5,7 +5,7 @@
 ** Login   <antoine.stempfer@epitech.net>
 ** 
 ** Started on  Tue Nov 15 16:51:34 2016 Antoine Stempfer
-** Last update Tue Nov 15 21:27:52 2016 Antoine Stempfer
+** Last update Tue Nov 15 23:06:23 2016 Antoine Stempfer
 */
 
 #include <stdlib.h>
@@ -36,7 +36,7 @@ int	get_referred_value(t_env *env, t_instruct_tkn tkn, int slot)
   if (tkn.addr_mod[slot] == ADDR_MOD_DIR)
     return (tkn.mod[slot]);
   else
-    return (env->vars[tkn.mod[0]] - 0);
+    return (env->vars[tkn.mod[slot]] - 0);
 }
 
 void	execute_script(t_program prog, char **argv, int argc)
@@ -57,6 +57,8 @@ void	execute_script(t_program prog, char **argv, int argc)
   my_putstr("\n");
   if (steps == STEPS_BEFORE_TIMEOUT)
     my_putstr("Stopped: Program timed out\n");
+  else
+    print_list(env.la);
   free_list(env.la);
   free_list(env.lb);
   free(env.vars);
