@@ -5,20 +5,28 @@
 ** Login   <antoine.stempfer@epitech.net>
 ** 
 ** Started on  Tue Nov 15 11:03:22 2016 Antoine Stempfer
-** Last update Tue Nov 15 18:59:21 2016 Antoine Stempfer
+** Last update Tue Nov 15 20:48:28 2016 Antoine Stempfer
 */
 
 #ifndef TECHSORT_H_
 #define TECHSORT_H_
 
-#define NUM_VARS	10
-#define NUM_INSTRUCTS	15
-#define NUM_ALIAS	13
+#include "list.h"
+
+#define NUM_VARS		10
+#define NUM_INSTRUCTS		15
+#define NUM_ALIAS		13
+
+#define ALLOW_TIMEOUT		1
+#define STEPS_BEFORE_TIMEOUT	10000
 
 typedef	struct	s_env
 {
   int		reader;
   int		*vars;
+  t_list	*la;
+  t_list	*lb;
+  int		cmds;
 }		t_env;
 
 typedef struct	s_instruct

@@ -5,10 +5,15 @@
 ** Login   <antoine.stempfer@epitech.net>
 ** 
 ** Started on  Tue Nov 15 13:43:19 2016 Antoine Stempfer
-** Last update Tue Nov 15 13:43:24 2016 Antoine Stempfer
+** Last update Tue Nov 15 20:24:50 2016 Antoine Stempfer
 */
 
-static const char	*alias[NUM_ALIAS] = {
+#ifndef TECHSORT_ALIAS_H_
+#define TECHSORT_ALIAS_H_
+
+#include "techsort.h"
+
+static char	*alias[NUM_ALIAS] = {
   "sa",
   "sb",
   "sc",
@@ -23,3 +28,5 @@ static const char	*alias[NUM_ALIAS] = {
   "rrb",
   "rrr"
 };
+
+#endif

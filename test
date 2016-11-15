@@ -1,6 +1,19 @@
-set 6 0
-sub 1 0
-run 0
-jvs #0 1
+set #0 1
+jmp 2
+run rb
+sub 1 1
+jvs #1 0
 jmp -3
-run 1
+jvs #1 0
+jlg -5
+run pb
+jmp 2
+run rrb
+add 1 1
+jve #1 #0
+jmp -3
+add 1 0
+jaf -15
+jmp 2
+run pa
+jbf -1

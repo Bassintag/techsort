@@ -5,7 +5,7 @@
 ** Login   <antoine.stempfer@epitech.net>
 ** 
 ** Started on  Tue Nov 15 10:38:27 2016 Antoine Stempfer
-** Last update Tue Nov 15 17:17:21 2016 Antoine Stempfer
+** Last update Tue Nov 15 19:19:24 2016 Antoine Stempfer
 */
 
 #include <fcntl.h>
@@ -44,7 +44,7 @@ int	main(int ac, char **av)
     }
   len = read(fdesc, buffer, BUFF_SIZE);
   buffer[len] = '\0';
-  execute_script(parse_file(buffer));
+  execute_script(parse_file(buffer), av, ac - 2);
   free(buffer);
   return (0);
 }

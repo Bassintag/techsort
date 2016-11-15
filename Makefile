@@ -5,7 +5,7 @@
 ## Login   <bassintag@epitech.eu>
 ##
 ## Started on  Tue Nov 15 13:22:11 2016 Bassintag
-## Last update Tue Nov 15 17:06:05 2016 Antoine Stempfer
+## Last update Tue Nov 15 19:17:03 2016 Antoine Stempfer
 ##
 
 CC	=	gcc -g
@@ -27,6 +27,12 @@ NAME	=	pushswap
 OBJS	=	$(SRCS:.c=.o)
 
 SRCS	=	src/main.c \
+		src/list.c \
+		src/instructions/interpreter.c \
+		src/instructions/push.c \
+		src/instructions/rotate.c \
+		src/instructions/reverse_rotate.c \
+		src/instructions/swap.c \
 		src/techsort/techsort_parser.c \
 		src/techsort/techsort_interpreter.c \
 		src/techsort/instructions/instruct_run.c \

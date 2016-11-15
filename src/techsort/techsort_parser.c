@@ -5,12 +5,13 @@
 ** Login   <antoine.stempfer@epitech.net>
 ** 
 ** Started on  Tue Nov 15 12:31:52 2016 Antoine Stempfer
-** Last update Tue Nov 15 17:45:43 2016 Antoine Stempfer
+** Last update Tue Nov 15 20:40:50 2016 Antoine Stempfer
 */
 
 #include <stdlib.h>
 #include "techsort.h"
 #include "techsort_instruct.h"
+#include "techsort_alias.h"
 #include "my.h"
 #include <stdio.h>
 
@@ -31,7 +32,10 @@ static t_instruct	get_label(char *buffer, int *reader)
   i = -1;
   while (++i < NUM_INSTRUCTS)
     if (my_strcmp(instructions[i].label, label) == 0)
-      return (instructions[i]);
+      {
+	free(label);
+	return (instructions[i]);
+      }
   free(label);
   return (instructions[0]);
 }
@@ -46,12 +50,31 @@ static int	get_num_len(int nb)
   return (i);
 }
 
+static int	parse_alias(char *buffer, int *reader)
+{
+  int		i;
+  int		j;
+
+  i = 0;
+  while (i < NUM_ALIAS)
+    {
+      j = 0;
+      while (alias[i][j] == buffer[j + *reader])
+	if (alias[i][++j] == '\0')
+	  {
+	    *reader += j - 1;
+	    return (i);
+	  }
+      i++;
+    }
+  return (0);
+}
+
 static void	get_mod(char *buffer, t_instruct_tkn *tkn, int *reader, int id)
 {
   int		mod;
 
-  while (buffer[*reader] != '#' && !my_ischarnum(buffer[*reader])
-	 && buffer[*reader] != '-' && buffer[*reader] != '\n'&& buffer[*reader])
+  while (buffer[*reader] == ' ' && (buffer[*reader] != '\n' && buffer[*reader]))
     (*reader)++;
   if(buffer[*reader] == '#')
     {
@@ -66,6 +89,8 @@ static void	get_mod(char *buffer, t_instruct_tkn *tkn, int *reader, int id)
       mod = my_getnbr(buffer + *reader);
       (*reader) += get_num_len(mod);
     }
+  else
+    mod = parse_alias(buffer, reader);
   (tkn->mod)[id] = mod;
 }
 
