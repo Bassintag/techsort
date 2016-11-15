@@ -5,13 +5,13 @@
 ** Login   <antoine.stempfer@epitech.net>
 ** 
 ** Started on  Tue Nov 15 10:55:41 2016 Antoine Stempfer
-** Last update Tue Nov 15 15:42:00 2016 Antoine Stempfer
+** Last update Tue Nov 15 23:09:32 2016 Antoine Stempfer
 */
 
 #ifndef PUSHSWAP_H_
 #define PUSHSWAP_H_
 
-#define USAGE_MSG	"Usage: ./pushswap <sorting script path> <nums...>\n"
+#define USAGE_MSG	"Usage: ./push_swap <sorting script path> <nums...>\n"
 #define	NO_FILE_MSG	"Error: File not found\n"
 #define MALLOC_ERR_MSG	"Error: Not enough memory\n"
 

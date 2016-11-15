@@ -5,7 +5,7 @@
 ** Login   <antoine.stempfer@epitech.net>
 ** 
 ** Started on  Tue Nov 15 11:03:22 2016 Antoine Stempfer
-** Last update Tue Nov 15 21:53:10 2016 Antoine Stempfer
+** Last update Tue Nov 15 23:34:01 2016 Antoine Stempfer
 */
 
 #ifndef TECHSORT_H_
@@ -14,7 +14,7 @@
 #include "list.h"
 
 #define NUM_VARS		10
-#define NUM_INSTRUCTS		17
+#define NUM_INSTRUCTS		21
 #define NUM_ALIAS		13
 
 #define ALLOW_TIMEOUT		1
@@ -57,6 +57,8 @@ void	instruct_run(t_env *, t_instruct_tkn);
 void	instruct_add(t_env *, t_instruct_tkn);
 void	instruct_sub(t_env *, t_instruct_tkn);
 void	instruct_set(t_env *, t_instruct_tkn);
+void	instruct_sal(t_env *, t_instruct_tkn);
+void	instruct_sbl(t_env *, t_instruct_tkn);
 void	instruct_jmp(t_env *, t_instruct_tkn);
 void	instruct_jle(t_env *, t_instruct_tkn);
 void	instruct_jlg(t_env *, t_instruct_tkn);
@@ -70,6 +72,7 @@ void	instruct_jvg(t_env *, t_instruct_tkn);
 void	instruct_jvs(t_env *, t_instruct_tkn);
 void	instruct_jas(t_env *, t_instruct_tkn);
 void	instruct_jbs(t_env *, t_instruct_tkn);
+void	instruct_dbg(t_env *, t_instruct_tkn);
 
 int	get_referred_value(t_env *, t_instruct_tkn, int);
 

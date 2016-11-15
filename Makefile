@@ -5,7 +5,7 @@
 ## Login   <bassintag@epitech.eu>
 ##
 ## Started on  Tue Nov 15 13:22:11 2016 Bassintag
-## Last update Tue Nov 15 21:51:37 2016 Antoine Stempfer
+## Last update Tue Nov 15 23:31:18 2016 Antoine Stempfer
 ##
 
 CC	=	gcc -g
@@ -22,7 +22,7 @@ LIBDIR	=	lib
 
 LIB	=	my
 
-NAME	=	pushswap
+NAME	=	push_swap
 
 OBJS	=	$(SRCS:.c=.o)
 
@@ -39,6 +39,8 @@ SRCS	=	src/main.c \
 		src/techsort/instructions/instruct_add.c \
 		src/techsort/instructions/instruct_sub.c \
 		src/techsort/instructions/instruct_set.c \
+		src/techsort/instructions/instruct_sal.c \
+		src/techsort/instructions/instruct_sbl.c \
 		src/techsort/instructions/instruct_jmp.c \
 		src/techsort/instructions/instruct_jle.c \
 		src/techsort/instructions/instruct_jlg.c \
@@ -51,7 +53,8 @@ SRCS	=	src/main.c \
 		src/techsort/instructions/instruct_jvg.c \
 		src/techsort/instructions/instruct_jvs.c \
 		src/techsort/instructions/instruct_jas.c \
-		src/techsort/instructions/instruct_jbs.c
+		src/techsort/instructions/instruct_jbs.c \
+		src/techsort/instructions/instruct_dbg.c
 
 all: $(NAME)
 

@@ -5,7 +5,7 @@
 ** Login   <antoine.stempfer@epitech.net>
 ** 
 ** Started on  Tue Nov 15 12:27:19 2016 Antoine Stempfer
-** Last update Tue Nov 15 21:52:11 2016 Antoine Stempfer
+** Last update Tue Nov 15 23:18:19 2016 Antoine Stempfer
 */
 
 #ifndef TECHSORT_INSTRUCT_H_
@@ -18,6 +18,8 @@ const t_instruct	instructions[NUM_INSTRUCTS] = {
   {"add", &instruct_add},
   {"sub", &instruct_sub},
   {"set", &instruct_set},
+  {"sal", &instruct_sal},
+  {"sbl", &instruct_sbl},
   {"jmp", &instruct_jmp},
   {"jle", &instruct_jle},
   {"jlg", &instruct_jlg},
@@ -30,7 +32,8 @@ const t_instruct	instructions[NUM_INSTRUCTS] = {
   {"jvg", &instruct_jvg},
   {"jvs", &instruct_jvs},
   {"jas", &instruct_jas},
-  {"jbs", &instruct_jbs}
+  {"jbs", &instruct_jbs},
+  {"dbg", &instruct_dbg}
 };
 
 #endif
