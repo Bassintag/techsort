@@ -1,1 +1,11 @@
 jas -1
+sal 1
+set 0 0
+jmp 4
+add 1 0
+run sa
+run ra
+jvs #1 #0
+jmp -4
+jas 2
+jmp -9

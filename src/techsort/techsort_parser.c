@@ -5,7 +5,7 @@
 ** Login   <antoine.stempfer@epitech.net>
 ** 
 ** Started on  Tue Nov 15 12:31:52 2016 Antoine Stempfer
-** Last update Tue Nov 15 23:07:24 2016 Antoine Stempfer
+** Last update Sat Nov 19 16:58:34 2016 Antoine Stempfer
 */
 
 #include <stdlib.h>
@@ -16,8 +16,8 @@
 
 static t_instruct	get_label(char *buffer, int *reader)
 {
-  char		*label;
-  int		i;
+  char			*label;
+  int			i;
 
   label = malloc(sizeof(char) * 4);
   i = 0;
@@ -80,9 +80,10 @@ static void	get_mod(char *buffer, t_instruct_tkn *tkn, int *reader, int id)
 {
   int		mod;
 
-  while (buffer[*reader] == ' ' && (buffer[*reader] != '\n' && buffer[*reader]))
+  while (buffer[*reader] == ' ' &&
+	 (buffer[*reader] != '\n' && buffer[*reader]))
     (*reader)++;
-  if(buffer[*reader] == '#')
+  if (buffer[*reader] == '#')
     {
       (tkn->addr_mod)[id] = ADDR_MOD_REF;
       (*reader)++;

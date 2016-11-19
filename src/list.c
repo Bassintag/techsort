@@ -5,7 +5,7 @@
 ** Login   <antoine.stempfer@epitech.net>
 ** 
 ** Started on  Tue Nov  8 12:30:51 2016 Antoine Stempfer
-** Last update Tue Nov 15 19:20:43 2016 Antoine Stempfer
+** Last update Sat Nov 19 16:58:16 2016 Antoine Stempfer
 */
 
 #include <stdlib.h>
@@ -32,7 +32,7 @@ t_list  	*create_list(int amount, char **args, int offset)
   return (result);
 }
 
-void	free_list(t_list *l)
+void		free_list(t_list *l)
 {
   t_list	*next;
   t_list	*start;

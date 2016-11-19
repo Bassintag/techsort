@@ -1,5 +1,5 @@
-sal 0
-sbl 1
-dbg #0 #1
-run pb
-jaf -4
+run sa
+set pb 0
+run #0
+set pa 0
+run #0
